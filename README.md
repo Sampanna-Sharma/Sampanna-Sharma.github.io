@@ -1,18 +1,32 @@
-# Spirathon 2019 Winner
-#### Team :- Night Owls
-#### Product Name :- Satyata
-#### Date :- 2018-02-02
+Freelancer Jekyll theme  [![Build Status](https://api.travis-ci.org/jeromelachaud/freelancer-theme.svg?branch=master)](https://travis-ci.org/jeromelachaud/freelancer-theme/) 
+=========================
 
+Jekyll theme based on [Freelancer bootstrap theme ](http://startbootstrap.com/template-overviews/freelancer/)
 
-# Hack-A-Week 2019 Winner
-#### Team :- Anischit
-#### Product Name :- Samadhan
-#### Date :- 2018-02-01
+## How to use
+ - Place a image in `/img/portfolio/`
+ - Replace `your-email@domain.com` in `_config.yml` with your email address. Refer to [formspree](http://formspree.io/) for more information.
+ - Create posts to display your projects. Use the follow as an example:
+```txt
+---
+layout: default
+modal-id: 1
+date: 2014-07-18
+img: cabin.png
+alt: image-alt
+project-date: July 2014
+client: The Client
+category: Web Development
+description: The description of the project
 
+---
+```
 
+## Demo
+View this jekyll theme in action [here](https://jeromelachaud.github.io/freelancer-theme)
 
-![Image](https://github.com/Sampanna-Sharma/Sampanna-Sharma.github.io/blob/master/misc/images/hack-a-week/1.jpg?raw=true) | ![Image](https://github.com/Sampanna-Sharma/Sampanna-Sharma.github.io/blob/master/misc/images/hack-a-week/2.jpg?raw=true)
--|-
-![Image](https://github.com/Sampanna-Sharma/Sampanna-Sharma.github.io/blob/master/misc/images/hack-a-week/3.jpg?raw=true)
-![Image](https://github.com/Sampanna-Sharma/Sampanna-Sharma.github.io/blob/master/misc/images/hack-a-week/4.jpg?raw=true)
+## Screenshot
+![screenshot](https://raw.githubusercontent.com/jeromelachaud/freelancer-theme/master/screenshot.png)
 
+---------
+For more details, read the [documentation](http://jekyllrb.com/)
