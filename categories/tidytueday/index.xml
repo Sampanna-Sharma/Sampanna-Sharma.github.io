@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TidyTueday on Sampanna Sharma</title>
+    <link>https://Sampanna-Sharma.github.io/categories/tidytueday/</link>
+    <description>Recent content in TidyTueday on Sampanna Sharma</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Oct 2020 17:04:34 +0545</lastBuildDate><atom:link href="https://Sampanna-Sharma.github.io/categories/tidytueday/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>All TidyTuesday Submission</title>
+      <link>https://Sampanna-Sharma.github.io/p/tidytuesday/</link>
+      <pubDate>Tue, 13 Oct 2020 17:04:34 +0545</pubDate>
+      
+      <guid>https://Sampanna-Sharma.github.io/p/tidytuesday/</guid>
+      <description>For Source code: https://github.com/Sampanna-Sharma/TidyTuesday   2020/09/29    2020/09/15 
+  2020/09/08 
+  2020/08/25 
+  2020/08/18 
+  2020/08/11    2020/08/11</description>
+    </item>
+    
+  </channel>
+</rss>
