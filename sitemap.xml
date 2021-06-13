@@ -1,85 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://Sampanna-Sharma.github.io/</loc>
-    <lastmod>2020-10-13T17:04:34+05:45</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Sampanna-Sharma.github.io/p/tidytuesday/</loc>
-    <lastmod>2020-10-13T17:04:34+05:45</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Sampanna-Sharma.github.io/categories/</loc>
-    <lastmod>2020-10-13T17:04:34+05:45</lastmod>
-  </url>
-  
-  <url>
+    <loc>https://Sampanna-Sharma.github.io/dataviz/</loc>
+    <lastmod>2021-06-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Sampanna-Sharma.github.io/2020/10/13/hello-r-markdown/</loc>
+    <lastmod>2020-10-13T13:06:13+05:45</lastmod>
+  </url><url>
     <loc>https://Sampanna-Sharma.github.io/tags/plot/</loc>
-    <lastmod>2020-10-13T17:04:34+05:45</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2020-10-13T13:06:13+05:45</lastmod>
+  </url><url>
     <loc>https://Sampanna-Sharma.github.io/post/</loc>
-    <lastmod>2020-10-13T17:04:34+05:45</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Sampanna-Sharma.github.io/tags/r/</loc>
-    <lastmod>2020-10-13T17:04:34+05:45</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Sampanna-Sharma.github.io/tags/</loc>
-    <lastmod>2020-10-13T17:04:34+05:45</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Sampanna-Sharma.github.io/categories/tidytueday/</loc>
-    <lastmod>2020-10-13T17:04:34+05:45</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Sampanna-Sharma.github.io/tags/tidyverse/</loc>
-    <lastmod>2020-10-13T17:04:34+05:45</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Sampanna-Sharma.github.io/p/hello-r-markdown/</loc>
     <lastmod>2020-10-13T13:06:13+05:45</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Sampanna-Sharma.github.io/categories/r/</loc>
-    <lastmod>2020-10-13T13:06:13+05:45</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://Sampanna-Sharma.github.io/tags/r-markdown/</loc>
     <lastmod>2020-10-13T13:06:13+05:45</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://Sampanna-Sharma.github.io/tags/regression/</loc>
     <lastmod>2020-10-13T13:06:13+05:45</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Sampanna-Sharma.github.io/archives/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://Sampanna-Sharma.github.io/page/</loc>
-    <lastmod>2020-10-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://Sampanna-Sharma.github.io/</loc>
+    <lastmod>2020-10-13T13:06:13+05:45</lastmod>
+  </url><url>
+    <loc>https://Sampanna-Sharma.github.io/tags/</loc>
+    <lastmod>2020-10-13T13:06:13+05:45</lastmod>
+  </url><url>
     <loc>https://Sampanna-Sharma.github.io/about/</loc>
     <lastmod>2020-10-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Sampanna-Sharma.github.io/portfolio/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>https://Sampanna-Sharma.github.io/search/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>https://Sampanna-Sharma.github.io/categories/</loc>
   </url>
-  
 </urlset>
