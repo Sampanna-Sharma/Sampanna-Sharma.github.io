@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hi, I am Sampanna, a data engineer by profession."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sampanna Sharma",
+    "section": "",
+    "text": "TidyTuesday - Ravelry Yarn\n\n\n\n\n\n\n\n2022\n\n\ntidytuesday\n\n\n\n\n\n\n\n\n\n\n\nOct 11, 2022\n\n\nSampanna Sharma\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n2022\n\n\nmeta\n\n\n\n\n\n\n\n\n\n\n\nMay 15, 2022\n\n\nSampanna Sharma\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Ravelry Yarn/index.html",
+    "href": "posts/Ravelry Yarn/index.html",
+    "title": "TidyTuesday - Ravelry Yarn",
+    "section": "",
+    "text": "The data this week comes from ravelry.com by way of Alice Walsh.\nRavelry describes itself as a social networking and organizational tool for knitters, crocheters, designers, spinners, weavers and dyers."
+  },
+  {
+    "objectID": "posts/Ravelry Yarn/index.html#required-library",
+    "href": "posts/Ravelry Yarn/index.html#required-library",
+    "title": "TidyTuesday - Ravelry Yarn",
+    "section": "Required Library",
+    "text": "Required Library\n\nlibrary(tidyverse)\nlibrary(tidytuesdayR)\nlibrary(DT)\nlibrary(ggimage)\nlibrary(hrbrthemes)\nlibrary(ggtext)"
+  },
+  {
+    "objectID": "posts/Ravelry Yarn/index.html#importing-data",
+    "href": "posts/Ravelry Yarn/index.html#importing-data",
+    "title": "TidyTuesday - Ravelry Yarn",
+    "section": "Importing Data",
+    "text": "Importing Data\n\ntt <- tt_load(\"2022-10-11\")\nyarn_df <- tt$yarn\n\nLets look into the dataset\n\nyarn_df %>% \n  head(20) %>% \n  datatable(options = list(pageLength = 5))"
+  },
+  {
+    "objectID": "posts/Ravelry Yarn/index.html#data-wrangling",
+    "href": "posts/Ravelry Yarn/index.html#data-wrangling",
+    "title": "TidyTuesday - Ravelry Yarn",
+    "section": "Data Wrangling:",
+    "text": "Data Wrangling:\nSelecting top reviewed companies on Ravelry\n\nyarn_df %>% \n  count(yarn_company_name) %>% \n  top_n(10,n) %>% \n  knitr::kable()\n\n\n\n\nyarn_company_name\nn\n\n\n\n\nBernat\n461\n\n\nColourMart\n732\n\n\nIce Yarns\n811\n\n\nKatia\n761\n\n\nLana Grossa\n1163\n\n\nLang Yarns\n555\n\n\nLion Brand\n390\n\n\nONline\n541\n\n\nPhildar\n533\n\n\nPlymouth Yarn\n391\n\n\n\n\n\nSelecting only products of Lana Grossa, ColourMart, Lang Yarns & Phildar\n\ntop <- c(\"Lana Grossa\", \"ColourMart\", \"Lang Yarns\", \"Phildar\")\n\ndf <- \nyarn_df %>% \n  select(yarn_company_name, rating_average) %>% \n  filter(yarn_company_name %in% top)"
+  },
+  {
+    "objectID": "posts/Ravelry Yarn/index.html#data-visualization",
+    "href": "posts/Ravelry Yarn/index.html#data-visualization",
+    "title": "TidyTuesday - Ravelry Yarn",
+    "section": "Data Visualization",
+    "text": "Data Visualization\nGoing through the data, it seems straightforward to visualize. For this dataset, I will go with density plot of average review of a product. As for aesthetic, using the threads of yarn to represent the curve lines should look great. As I want the yarns to give the impression of falling down, I will need to place axis on different side.\n\nColor Palette and Graphics\n\n# Selecting 4 color scheme\ncolor_scheme = c('#FBC031', '#F2967C', '#D2B48E', '#5E8276')\n\n# Yarn icon in the color scheme\nyarn_yellow_img <- paste0(here::here(), \"/posts/Ravelry Yarn/yarn-yellow.png\")\nyarn_green_img <- paste0(here::here(), \"/posts/Ravelry Yarn/yarn-green.png\")\nyarn_gray_img <- paste0(here::here(), \"/posts/Ravelry Yarn/yarn-gray.png\")\nyarn_pink_img <- paste0(here::here(), \"/posts/Ravelry Yarn/yarn-pink.png\")\n\n\n\nDensity Plot\n\ndf %>% \n  ggplot() +\n  geom_density(aes(y=rating_average, x=after_stat(count), color=yarn_company_name), size = 1.2)+\n  geom_image(aes(x=750, y=5,image = yarn_yellow_img), size = 0.07)+\n  geom_image(aes(x=90, y=5,image = yarn_green_img), size = 0.07)+\n  geom_image(aes(x=150, y=5,image = yarn_gray_img), size = 0.07)+\n  geom_image(aes(x=325, y=5,image = yarn_pink_img), size = 0.07)+\n  labs(y='Avg. Ratings',\n       x='No. of Product',\n       guides = FALSE,\n       color='',\n       title= 'Highly Reviewed Brands of **Ravelry Yarn**',\n       subtitle = \"<br>Ravelry is a social networking and organizational tool for knitters, crocheters, designers, spinners, weavers and dyers. It houses Brands:\n                  <span style = 'color:#FBC031;'>**ColourMart**</span>,\n                  <span style = 'color:#F2967C;'>**Lana Grossa**</span>,\n                  <span style = 'color:#D2B48E;'>**Lang Yarns**</span> and\n                  <span style = 'color:#5E8276;'>**Phildar**</span> with the most reviews.<br>\",\n       caption = \"viz: @kopitesam | source: ravelry.com\") +\n  scale_x_continuous(position = \"top\") + \n  scale_y_reverse(position = \"right\")+\n  scale_colour_manual(values = color_scheme)+\n  theme_ipsum_ps(grid=\"Y\", \n                 axis_text_size=12,\n                 axis_title_size = 12) +\n  theme(legend.position=\"none\",\n        plot.title = element_textbox_simple(),\n        plot.subtitle = element_textbox_simple(),\n        plot.caption.position = \"plot\",\n        aspect.ratio=1.25,\n        plot.background = element_rect(color = \"black\", size = 2))"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is my first post in a Quarto blog. Welcome!\nIn this blog, I will be posting my #tidytuesday submissions. I will be sharing whatever I learn along the way."
+  }
+]
